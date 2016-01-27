@@ -1,0 +1,52 @@
+.steps{
+  list-style: none;
+}
+
+.step{
+  display: inline-block;
+  padding: 0 35px;
+}
+
+.step .done{
+  display: none;
+}
+
+.step_icon{
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 50px;
+}
+
+.step_icon.not_done{
+  color: black;
+  border: 4px solid black;
+  border-radius: 25px;
+  line-height: 39px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.step.done .not_done{
+  display: none;
+}
+
+.step.done .done{
+  display: inline-block;
+}
+
+.checkmark {
+  stroke: green;
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash 2s ease-out forwards 1;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 745.74853515625;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
