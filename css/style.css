@@ -12,7 +12,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 	font-weight: 300;
 }
 
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
 	padding: 0;
 	margin-bottom: 12px;
-    font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	font-size: 18px;
 	line-height: 28px;
@@ -182,47 +182,6 @@ input {
 	font-weight: normal !important;
 }
 
-/* HEADER SECTION */
-#h {
-	background: url(../images/hero.jpg) no-repeat center top;
-	padding-top: 5px;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 700px;
-	width: 100%;
-
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-}
-
-#h .logo {
-	margin-top: 30px;
-	margin-left: 40px;
-	padding-bottom: 150px;
-}
-
-#h .logo h2{
-	font-weight: 900;
-	color: white;
-	letter-spacing: 1px;
-}
-
-#h h3 {
-	margin-top: 10px;
-}
-
-#h i {
-	font-size: 50px;
-}
-
 /* GREY SECTION */
 #g {
 	padding-top: 50px;
@@ -353,6 +312,13 @@ input {
 	font-weight: 900;
 	color: white;
 	letter-spacing: 1px;
+}
+
+#h2 h1,
+#h2 h2,
+#h2 h3,
+#h2 h4{
+	text-shadow: 1px 1px 1px black;
 }
 
 #h2 h3 {
