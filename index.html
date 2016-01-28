@@ -2,10 +2,10 @@
 <html>
   <head>
     <title>Adella</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
   </head>
   <body>
     <div id="h2">
@@ -60,7 +60,7 @@
               </div>
             </div>
           </div>
-        </div><
+        </div>
 
         <div class="row mt">
           <div class="col-md-8 col-md-offset-2">
@@ -76,47 +76,75 @@
             <h2>Become Part of The Family</h2>
             <div class="col-md-8 col-md-offset-2">
               <ul class="steps">
-                <li class="step">
+                <li class="step" data-step="one">
                   <span class="step_icon not_done">1</span>
                   <span class="step_icon done">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  	 viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+                  	 viewbox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
                       <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4
                     	C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
                     </svg>
                   </span>
                 </li>
-                <li class="step">
+                <li class="step" data-step="two">
                   <span class="step_icon not_done">2</span>
                   <span class="step_icon done">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+                    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewbox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
                       <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4
                       C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
                     </svg>
                   </span>
                 </li>
-                <li class="step">
+                <li class="step" data-step="three">
                   <span class="step_icon not_done">3</span>
                   <span class="step_icon done">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+                    <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewbox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
                       <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4
                       C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
                     </svg>
                   </span>
                 </li>
               </ul>
-              <form class="form">
-                <input type="text" placeholder="First Name"/>
-              </form>
+              </div>
+              </div>
+              <hr/>
+              <div class="row">
+              <div id="step_one" class="step_form active">
+                <form class="form">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Email address</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                  </div>
+                </form>
+                <span class="btn btn-primary" data-step="one" data-next="two">Next</span>
+              </div>
+              <div id="step_two" class="step_form">
+                <div></div>
+                <span class="btn btn-primary" data-step="two" data-next="three">Next</span>
+              </div>
+              <div id="step_three" class="step_form">
+                <span class="btn btn-primary" data-step="three" data-next="four">Done</span>
+              </div>
+              <div id="step_four" class="step_form">
+                <span>Congrats!</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
 
       <div id="f">&copy; Adella 2016</div>
-
+    <script src="js/zepto.min.js" ></script>
     <script src="js/animate.min.js" ></script>
     <script src="js/main.js" ></script>
   </body>
