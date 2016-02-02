@@ -51,6 +51,10 @@
   display: block;
 }
 
+.userForm{
+  display: none;
+}
+
 @keyframes dash {
   0% {
     stroke-dashoffset: 745.74853515625;
@@ -58,4 +62,16 @@
   100% {
     stroke-dashoffset: 0;
   }
+}
+
+#h2 .logo{
+  position: relative;
+  z-index: 1;
+}
+
+#h2 video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
