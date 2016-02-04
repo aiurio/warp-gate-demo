@@ -1,6 +1,6 @@
 $('.step_form .btn').on('click', finishStep);
-
 $('#fbLogin').on('click', login);
+$('#processPayment').on('click', processPayment);
 
 //Functions
 function finishStep(e){
@@ -34,28 +34,10 @@ function login(){
   });
 }
 
-var handler = StripeCheckout.configure({
-    key: 'pk_T20xIUBLEJGrjK8dhW9Yit8iq45I7',
-    image: '/img/documentation/checkout/marketplace.png',
-    locale: 'auto',
-    token: function(token) {
-      console.log(token);
-      $('[data-step="two"]').click();
-      // Use the token to create the charge with a server-side script.
-      // You can access the token ID with `token.id`
-    }
-  });
+function processPayment(){
+  window.runPayment($('#cc_number').val(),
+                    $('#cvc_number').val(),
+                    $('#exp_month').val(),
+                    $('#exp_year').val());
 
-  $('#payStripe').on('click', function(e) {
-    // Open Checkout with further options
-    handler.open({
-      name: 'Adella',
-      description: 'Membership',
-      amount: 4999
-    });
-  });
-
-  // Close Checkout on page navigation
-  $(window).on('popstate', function() {
-    handler.close();
-  });
+}

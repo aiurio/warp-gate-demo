@@ -124,7 +124,6 @@
                         <label for="lastName">Email address</label>
                         <input type="text" class="form-control" id="lastName" placeholder="Last Name">
                       </div>
-                      <img src="" id="user_avatar" class="pull-right"/>
                       <div class="form-group">
                         <label for="email">Email address</label>
                         <input type="email" class="form-control" id="email" placeholder="Email">
@@ -133,8 +132,27 @@
                   <span class="btn btn-primary pull-right" data-step="one" data-next="two">Next</span>
                 </div>
                 <div id="step_two" class="step_form">
-                  <span class="btn btn-primary" id="payStripe">Pay With Card</span>
-                  <span class="btn btn-primary" style="visibility: hidden;" data-step="two" data-next="three">Pay With Card</span>
+                  <form class="form">
+                      <div class="form-group">
+                        <label for="cc_number">Credit Card Number</label>
+                        <input type="text" class="form-control" id="cc_number" placeholder="Credit Card Number">
+                      </div>
+                      <div class="form-group">
+                        <label for="cvc_number">CVC</label>
+                        <input type="text" class="form-control" id="cvc_number" placeholder="cvc">
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-xs-6">
+                          <label for="exp_month">Expiration Month</label>
+                          <input type="number" class="form-control" id="exp_month" placeholder="Month"/>
+                        </div>
+                        <div class="col-xs-6">
+                          <label for="exp_year">Expiration Year</label>
+                          <input type="number" class="form-control" id="exp_year" placeholder="Year"/>
+                        </div>
+                      </div>
+                  </form>
+                  <span id="processPayment" class="btn btn-primary" data-step="two" data-next="three">Pay With Card</span>
                 </div>
                 <div id="step_three" class="step_form">
                   <span class="btn btn-primary" data-step="three" data-next="four">Done</span>
@@ -163,6 +181,7 @@
           version    : 'v2.5'
         });
       };
+      window.setKeys('pk_T20xIUBLEJGrjK8dhW9Yit8iq45I7', 'oxDgzDrvIp0Q9XpBn6YLlQpzysyO5FRx');
     </script>
   </body>
 </html>

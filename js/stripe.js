@@ -2,22 +2,22 @@
 window.stripeKeys = {
 	publish : '',
 	secret: ''
-}
+};
 
 window.setKeys = function(pub, priv){
 	window.stripeKeys.publish = pub;
 	window.stripeKeys.secret = priv;
-}
+};
 
 window.runPayment = function(number, cvc, month, year){
 	Stripe.setPublishableKey(window.stripeKeys.publish);
 	Stripe.card.createToken({
-	  number: number, cvc, month, year,
+	  number: number,
 	  cvc: cvc,
 	  exp_month: month,
 	  exp_year: year
 	}, tokenResponse);
-}
+};
 
 function tokenResponse(code, res){
 	if( code < 200 || code >= 300 || (res && res.error) ){
@@ -30,7 +30,7 @@ function tokenResponse(code, res){
         type: "POST",
         crossDomain: true,
         data: {
-		  "amount": 100,
+		  "amount": 4999,
 		  "customer": {
 		    "name": "Andre Kradolfer"
 		  },
@@ -52,7 +52,7 @@ function tokenResponse(code, res){
             alert("error");
             console.log('arguments');
         }
-    });	
+    });
 }
 
 function tokenFailed(code, res){
