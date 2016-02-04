@@ -39,5 +39,16 @@ function processPayment(){
                     $('#cvc_number').val(),
                     $('#exp_month').val(),
                     $('#exp_year').val());
+}
 
+
+$(window).scroll(function(e){
+  $('#h2').css('transform', 'translate3d(0px, ' + $(window).scrollTop() * 0.6 + 'px, 0px)');
+  if((window.pageYOffset +  window.innerHeight + 200) >  $('#brushes').offset().top){
+    $('#brushes').css('opacity', '1');
+  }
+});
+
+if((window.pageYOffset +  window.innerHeight + 200) >  $('#brushes').offset().top){
+  $('#brushes').css('opacity', '1');
 }
