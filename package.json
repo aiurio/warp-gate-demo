@@ -1,0 +1,25 @@
+{
+  "name": "warp-gate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aiurio/warp-gate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aiurio/warp-gate/issues"
+  },
+  "homepage": "https://github.com/aiurio/warp-gate#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "stripe": "^4.3.0"
+  }
+}
