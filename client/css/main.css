@@ -1,3 +1,7 @@
+#g{
+  position: relative;
+  z-index: 1;
+}
 .steps{
   list-style: none;
 }
@@ -94,7 +98,7 @@
 }
 
 .family{
-  height: 400px;
+  min-height: 400px;
 }
 
 [id^='step'] input, [id^='step'] input:focus {
@@ -105,12 +109,12 @@
   border-radius: 0px;
   padding: 0;
   font-size: 28px;
+  color: #000;
 }
 
 [id^='step'] input:focus{
   border-bottom: 2px solid #000;
 }
-
 
 .slug-form{
   position:relative;
@@ -130,4 +134,17 @@
 
 #fbLogin svg{
   vertical-align: middle;
+}
+@media (max-width: 768px) {
+  [id^='step'] input, [id^='step'] input:focus {
+    font-size: 18px;
+  }
+
+  [id^='step']{
+    padding: 10px;
+  }
+
+  .slug-form #slug{
+    padding-left: 240px;
+  }
 }
