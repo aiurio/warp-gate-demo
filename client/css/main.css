@@ -123,7 +123,7 @@
 .slug-form #slug{
   position: absolute;
   top: 25px;
-  padding-left: 375px;
+  padding-left: 294px;
 }
 
 #fbLogin{
@@ -145,6 +145,6 @@
   }
 
   .slug-form #slug{
-    padding-left: 240px;
+    padding-left: 198px;
   }
 }
