@@ -9,6 +9,7 @@ var actions = {
     customer.last_name = $('#lastName').val();
     customer.email = $('#email').val();
     customer.name = customer.first_name + customer.last_name;
+    customer.slug = $('#slug').val();
     console.log(customer);
   },
   processPayment: function(){
@@ -43,6 +44,7 @@ function login(){
           $('#lastName').attr('value', response.last_name);
           $('#email').attr('value', response.email);
           $('#user_avatar').attr('src', response.picture.data.url);
+          $('#slug').attr('value', response.email.split('@')[0]);
         });
       } else {
         console.log('User cancelled login or did not fully authorize.');

@@ -83,7 +83,6 @@
   object-fit: cover;
 }
 
-
 #brushes{
   opacity: 0;
   transition: opacity 2s;
@@ -92,4 +91,43 @@
 .section{
   background-color: white;
   position: relative;
+}
+
+.family{
+  height: 400px;
+}
+
+[id^='step'] input, [id^='step'] input:focus {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid #dfdfdf;
+  border-radius: 0px;
+  padding: 0;
+  font-size: 28px;
+}
+
+[id^='step'] input:focus{
+  border-bottom: 2px solid #000;
+}
+
+
+.slug-form{
+  position:relative;
+}
+
+.slug-form #slug{
+  position: absolute;
+  top: 25px;
+  padding-left: 375px;
+}
+
+#fbLogin{
+  background-color: #3b5998;
+  color: white;
+  fill: white;
+}
+
+#fbLogin svg{
+  vertical-align: middle;
 }
