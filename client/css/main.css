@@ -126,13 +126,18 @@
   padding-left: 294px;
 }
 
-#fbLogin{
+#fbLogin, #fbShare{
   background-color: #3b5998;
   color: white;
   fill: white;
 }
 
-#fbLogin svg{
+#fbShare{
+  padding: 1px 6px;
+  vertical-align: top;
+}
+
+#fbLogin svg, #fbShare svg{
   vertical-align: middle;
 }
 @media (max-width: 768px) {

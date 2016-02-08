@@ -1,6 +1,6 @@
 $('.step_form .btn').on('click', finishStep);
 $('#fbLogin').on('click', login);
-
+$('#fbShare').on('click', share);
 var customer = {};
 //Functions
 var actions = {
@@ -29,6 +29,13 @@ function finishStep(e){
   $('#step_' + step).removeClass('active');
   if(next) $('#step_' + next).addClass('active');
   if(run) actions[run]();
+}
+
+function share(){
+  FB.ui({
+    method: 'share',
+    href: 'http://adella.com/team/' + customer.slug,
+  }, function(response){});
 }
 
 function login(){
