@@ -43,17 +43,14 @@ function tokenResponse(code, res){
         dataType: 'json',
         success: function (response) {
             console.log('success', response);
-            alert('Awesome! Go check Stripe!');
         },
         error: function (xhr, status) {
-            alert('error');
             console.log('arguments');
         }
     });
 }
 
 function tokenFailed(code, res){
-	alert('failed');
 	console.warn(res);
 }
 
