@@ -101,7 +101,7 @@
   min-height: 400px;
 }
 
-[id^='step'] input, [id^='step'] input:focus {
+[id^='step'] input, [id^='step'] input:focus, [id^='step'] input:disabled {
   border: none;
   background: transparent;
   box-shadow: none;

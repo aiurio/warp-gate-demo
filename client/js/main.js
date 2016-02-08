@@ -13,6 +13,10 @@ var actions = {
     console.log(customer);
   },
   processPayment: function(){
+    console.log($('#cc_number').val(),
+    $('#cvc_number').val(),
+    $('#exp_month').val(),
+    $('#exp_year').val());
     window.runPayment(customer,
                       $('#cc_number').val(),
                       $('#cvc_number').val(),

@@ -9,6 +9,7 @@
   </head>
   <body>
     <div id="h2">
+      <video autoplay loop src="images/heroclip.mp4"></video>
       <div class="logo">
         <a href="index.html"><h2>Adella</h2></a>
       </div>
@@ -139,7 +140,7 @@
                       </div>
                       <div class="form-group slug-form">
                         <label for="slug">Referral Link</label>
-                        <input type="text" class="form-control" id="slug-prefix" placeholder="http://adella.com/team/">
+                        <input disabled="disabled" type="text" class="form-control" id="slug-prefix" placeholder="http://adella.com/team/">
                         <input type="text" class="form-control" id="slug" placeholder="Link">
                       </div>
                   </form>
@@ -169,10 +170,29 @@
                   <span class="btn btn-primary pull-right" data-step="two" data-next="three" data-run="processPayment">Pay With Card</span>
                 </div>
                 <div id="step_three" class="step_form">
+                  <h3>Start building your team!</h3>
+                  <p>
+                    Maecenas dignissim, odio et imperdiet vehicula, odio enim dapibus sapien, sed hendrerit ligula est quis dui. Nam sed neque sit amet lacus ultricies cursus eget vitae nisi. Sed porttitor quam sed eros scelerisque maximus. Nam vitae lacinia massa. Cras justo sapien, pulvinar vitae orci sed, volutpat porttitor tellus.
+                  </p>
+                  <span class="btn btn-default" id="fbShare">
+                    <svg viewBox="0 0 33 33" width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g>
+                        <path d="M 17.996,32L 12,32 L 12,16 l-4,0 l0-5.514 l 4-0.002l-0.006-3.248C 11.993,2.737, 13.213,0, 18.512,0l 4.412,0 l0,5.515 l-2.757,0 c-2.063,0-2.163,0.77-2.163,2.209l-0.008,2.76l 4.959,0 l-0.585,5.514L 18,16L 17.996,32z"></path>
+                      </g>
+                    </svg>
+                    Share
+                  </span>
+                  <a class="twitter-share-button"
+                    href="https://twitter.com/intent/tweet?text=Join my team!&amp;url=http://adella.com"
+                    data-size="large">
+                  Tweet</a>
                   <span class="btn btn-primary pull-right" data-step="three" data-next="four">Done</span>
                 </div>
                 <div id="step_four" class="step_form">
-                  <span>Congrats!</span>
+                  <h3>Welcome to the Family!</h3>
+                  <p>
+                    Nam sed neque sit amet lacus ultricies cursus eget vitae nisi. Sed porttitor quam sed eros scelerisque maximus. Nam vitae lacinia massa. Cras justo sapien, pulvinar vitae orci sed, volutpat porttitor tellus.Maecenas dignissim, odio et imperdiet vehicula, odio enim dapibus sapien, sed hendrerit ligula est quis dui.
+                  </p>
                 </div>
               </div>
           </div>
@@ -180,11 +200,11 @@
 
 
       <div id="f"></div>
-    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript" src="js/stripe.js"></script>
-    <script src="js/zepto.min.js" ></script>
-    <script src="js/main.js" ></script>
+    <script type="text/javascript" src="js/zepto.min.js" ></script>
+    <script type="text/javascript" src="js/main.js" ></script>
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -192,8 +212,16 @@
           xfbml      : true,
           version    : 'v2.5'
         });
+        console.log('loaded');
       };
       window.setKeys('pk_test_yD3bLii0mJrR7628jDyK4RP4', 'sk_test_whtJ83lew9VkbOgmgnX3eKsD');
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
     </script>
   </body>
 </html>
